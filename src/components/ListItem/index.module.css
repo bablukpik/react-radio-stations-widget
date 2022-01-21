@@ -1,0 +1,12 @@
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  border-bottom: 1px solid #515561;
+  padding: 14.5px 0;
+  cursor: pointer;
+}
+
+.listItem:last-of-type {
+  border-bottom: none;
+}
