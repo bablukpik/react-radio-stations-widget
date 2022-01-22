@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   list-style-type: none;
-  border-bottom: 1px solid #515561;
+  border-bottom: 2px solid #42424c;
   padding: 14.5px 0;
   cursor: pointer;
 }
