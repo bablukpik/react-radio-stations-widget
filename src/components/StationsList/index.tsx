@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styles from './index.module.css'
+import styles from './StationsList.module.css'
 import ListItem from '../ListItem'
 import Text from '../Text'
 import {State as StateType} from '../../context/stationsContext'
@@ -16,7 +16,6 @@ const StationList: React.FC<Props> = state => {
   const animateProps = useSpring({delay: 100, opacity: 1, from: {opacity: 0}})
 
   const dispatch = useStationDispatch()
-  // check this 'any'
   const handleClick = (e: any) => {
     dispatch({type: 'SET_CURRENTLY_PLAYING', payload: e.currentTarget.id})
   }

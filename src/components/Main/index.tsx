@@ -2,7 +2,7 @@ import * as React from 'react'
 import Header from '../Header'
 import StationList from '../StationsList'
 import Footer from '../Footer'
-import styles from './index.module.css'
+import styles from './Main.module.css'
 import {useStationContext} from '../../context/stationsContext'
 
 const Base: React.FC = () => {

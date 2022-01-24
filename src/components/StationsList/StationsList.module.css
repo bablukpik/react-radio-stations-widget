@@ -3,8 +3,8 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  padding-left: 47px;
-  padding-right: 30px;
+  padding-left: 35px;
+  padding-right: 35px;
   padding-bottom: 63px;
   padding-top: 54px;
   height: 544px;
@@ -17,6 +17,7 @@
   width: 0 !important;
   display: none;
 }
+
 .stationList {
   display: flex;
   justify-content: space-between;

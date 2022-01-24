@@ -1,10 +1,10 @@
-import Base from './components/Base'
+import Main from './components/Main'
 import {StationProvider} from './context/stationsContext'
 function App() {
   return (
     <StationProvider>
       <div className="App">
-        <Base />
+        <Main />
       </div>
     </StationProvider>
   )

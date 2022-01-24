@@ -1,6 +1,6 @@
 import * as React from 'react'
 import cn from 'classnames'
-import styles from './index.module.css'
+import styles from './Text.module.css'
 
 interface Props {
   bold?: boolean

@@ -14,5 +14,6 @@
 .footerTitle {
   font-size: 22px;
   color: #edae61;
-  font-weight: 300;
+  font-weight: 400;
+  text-transform: uppercase;
 }
