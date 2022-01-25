@@ -1,13 +1,14 @@
-import Main from './components/Main'
-import {StationProvider} from './context/stationsContext'
+import { Provider } from 'react-redux';
+import store from './redux/store';
+import Main from './components/Main';
 function App() {
   return (
-    <StationProvider>
+    <Provider store={store}>
       <div className="App">
         <Main />
       </div>
-    </StationProvider>
+    </Provider>
   )
 }
 
-export default App
+export default App;

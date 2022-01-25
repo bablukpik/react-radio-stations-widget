@@ -1,19 +1,18 @@
-import * as React from 'react'
-import Header from '../Header'
-import StationList from '../StationsList'
-import Footer from '../Footer'
-import styles from './Main.module.css'
-import {useStationContext} from '../../context/stationsContext'
+import { useSelector, RootStateOrAny } from 'react-redux';
+import Header from '../Header';
+import StationList from '../StationsList';
+import Footer from '../Footer';
+import styles from './Main.module.css';
 
-const Base: React.FC = () => {
-  const state = useStationContext()
+const Main = () => {
+  const allStations = useSelector((store: RootStateOrAny) => store.allStations);
   return (
     <div className={styles.container}>
       <Header />
-        {!state ? <h1>Loading Stations...</h1> : <StationList state={state} />}
-      <Footer state={state} />
+        <StationList state={allStations} />
+      <Footer state={allStations} />
     </div>
   )
 }
 
-export default Base
+export default Main;

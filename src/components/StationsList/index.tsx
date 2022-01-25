@@ -1,28 +1,28 @@
-import * as React from 'react'
-import styles from './StationsList.module.css'
-import ListItem from '../ListItem'
-import Text from '../Text'
-import {State as StateType} from '../../context/stationsContext'
-import {useStationDispatch} from '../../context/stationsContext'
-import {useSpring, animated} from 'react-spring'
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import styles from './StationsList.module.css';
+import ListItem from '../ListItem';
+import Text from '../Text';
+import {useSpring, animated} from 'react-spring';
+import { State, StationItems } from 'src/redux/reducers/stationsReducer';
 
 interface Props {
-  state: StateType
+  state: State;
 }
 
-const StationList: React.FC<Props> = state => {
-  const {stations} = state?.state
+const StationList = ({ state }: Props) => {
+  const { stations } = state;
   const {stationListWrapper, stationList} = styles
   const animateProps = useSpring({delay: 100, opacity: 1, from: {opacity: 0}})
 
-  const dispatch = useStationDispatch()
+  const dispatch = useDispatch()
   const handleClick = (e: any) => {
     dispatch({type: 'SET_CURRENTLY_PLAYING', payload: e.currentTarget.id})
   }
   return (
     <div className={stationListWrapper}>
       <animated.ul className={stationList} style={animateProps}>
-        {stations.map(item => {
+        {stations.map((item: StationItems) => {
           return (
             <React.Fragment key={item.number}>
               <ListItem
@@ -42,4 +42,4 @@ const StationList: React.FC<Props> = state => {
   )
 }
 
-export default StationList
+export default StationList;

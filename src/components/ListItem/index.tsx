@@ -1,22 +1,20 @@
-import * as React from 'react'
-import {useSpring, animated} from 'react-spring'
-import Button from '../Button'
-import Image from '../Image'
-import MinusIcon from '../../assets/icons/minus.png'
-import PlusIcon from '../../assets/icons/plus.png'
-import CoverImg from '../../assets/icons/cover-img.png'
-
-// import Cover from '../Cover_def'
-import styles from './ListItem.module.css'
+import React from 'react';
+import {useSpring, animated} from 'react-spring';
+import Button from '../Button';
+import Image from '../Image';
+import MinusIcon from '../../assets/icons/minus.png';
+import PlusIcon from '../../assets/icons/plus.png';
+import CoverImg from '../../assets/icons/cover-img.png';
+import styles from './ListItem.module.css';
 
 interface Props {
-  isOpen: boolean
-  children: React.ReactNode
-  onClick: any
-  id: string
+  isOpen: boolean;
+  children: React.ReactNode;
+  onClick: any;
+  id: string;
 }
 
-const ListItem: React.FC<Props> = ({isOpen = false, children, ...props}) => {
+const ListItem = ({ isOpen = false, children, ...props }: Props) => {
   const animateProps = useSpring({
     delay: 90,
     from: {opacity: 0},
@@ -52,4 +50,4 @@ const ListItem: React.FC<Props> = ({isOpen = false, children, ...props}) => {
   )
 }
 
-export default ListItem
+export default ListItem;

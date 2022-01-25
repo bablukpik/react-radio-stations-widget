@@ -1,14 +1,14 @@
-import * as React from 'react'
-import {State} from '../../context/stationsContext'
-import {getCurrentlyPlayingStation} from '../../utils/helperFunctions'
-import Text from '../Text'
-import styles from './Footer.module.css'
+import { State } from 'src/redux/reducers/stationsReducer';
+import { getCurrentlyPlayingStation } from '../../utils/helperFunctions';
+import Text from '../Text';
+import styles from './Footer.module.css';
+
 interface Props {
-  state: State
+  state: State;
 }
 
-const Footer: React.FC<Props> = ({ state }) => {
-  const [station] = getCurrentlyPlayingStation(state.currentlyPlaying, state)
+const Footer = ({ state }: Props) => {
+  const [station] = getCurrentlyPlayingStation(state)
 
   return (
     <footer className={styles.footer}>
@@ -22,4 +22,4 @@ const Footer: React.FC<Props> = ({ state }) => {
   )
 }
 
-export default Footer
+export default Footer;
