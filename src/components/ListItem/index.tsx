@@ -10,7 +10,7 @@ import styles from './ListItem.module.css';
 interface Props {
   isOpen: boolean;
   children: React.ReactNode;
-  onClick: any;
+  onClick: (e: any) => void;
   id: string;
 }
 

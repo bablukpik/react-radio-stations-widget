@@ -4,7 +4,7 @@ import styles from './StationsList.module.css';
 import ListItem from '../ListItem';
 import Text from '../Text';
 import {useSpring, animated} from 'react-spring';
-import { State, StationItems } from 'src/redux/reducers/stationsReducer';
+import { State, StationItem } from 'src/reducers/stationsReducer';
 
 interface Props {
   state: State;
@@ -16,23 +16,28 @@ const StationList = ({ state }: Props) => {
   const animateProps = useSpring({delay: 100, opacity: 1, from: {opacity: 0}})
 
   const dispatch = useDispatch()
-  const handleClick = (e: any) => {
-    dispatch({type: 'SET_CURRENTLY_PLAYING', payload: e.currentTarget.id})
+  const handleClick = (item: StationItem) => {
+    dispatch({
+      type: 'SET_CURRENTLY_PLAYING',
+      payload: { 
+        station: { ...item, isOpen: !item.isOpen },
+      },
+    });
   }
   return (
     <div className={stationListWrapper}>
       <animated.ul className={stationList} style={animateProps}>
-        {stations.map((item: StationItems) => {
+        {stations.map((item: StationItem) => {
           return (
-            <React.Fragment key={item.number}>
+            <React.Fragment key={item.id}>
               <ListItem
-                onClick={handleClick}
+                onClick={() => handleClick(item)}
+                key={item.id}
+                id={item.id}
                 isOpen={item.isOpen}
-                key={item.number}
-                id={item.number}
               >
                 <Text>{item.name}</Text>
-                <Text bold>{item.number}</Text>
+                <Text bold>{item.id}</Text>
               </ListItem>
             </React.Fragment>
           )

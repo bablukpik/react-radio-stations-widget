@@ -1,20 +1,7 @@
-import { State, Action } from '../redux/reducers/stationsReducer';
-
-const setCurrentlyPlaying = (state: State, action: Action) => {
-  const stations = [...state.stations];
-
-  for (let station of stations) {
-    if (station.number !== action.payload && station.isOpen) {
-      station.isOpen = false;
-    } else if (station.number === action.payload) {
-      station.isOpen = true;
-    }
-  }
-  return stations;
-}
+import { State } from '../reducers/stationsReducer';
 
 const getCurrentlyPlayingStation = (state: State) => {
-  const station = [...state.stations].filter(item => item.isOpen);
+  const station = [...state.stations].find(item => item.isOpen);
   return station;
 }
 
@@ -24,4 +11,4 @@ async function fetchStations(url: string): Promise<State> {
   return data;
 }
 
-export { getCurrentlyPlayingStation, fetchStations, setCurrentlyPlaying }
+export { getCurrentlyPlayingStation, fetchStations }

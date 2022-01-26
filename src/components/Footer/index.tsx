@@ -1,4 +1,4 @@
-import { State } from 'src/redux/reducers/stationsReducer';
+import { State } from 'src/reducers/stationsReducer';
 import { getCurrentlyPlayingStation } from '../../utils/helperFunctions';
 import Text from '../Text';
 import styles from './Footer.module.css';
@@ -8,7 +8,7 @@ interface Props {
 }
 
 const Footer = ({ state }: Props) => {
-  const [station] = getCurrentlyPlayingStation(state)
+  const station = getCurrentlyPlayingStation(state)
 
   return (
     <footer className={styles.footer}>
