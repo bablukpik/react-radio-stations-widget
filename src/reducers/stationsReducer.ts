@@ -6,7 +6,7 @@ export interface StationItem {
 
 export interface State {
   stations: Array<StationItem>
-  currentlyPlaying: StationItem | null;
+  currentlyPlaying?: StationItem | null;
 }
 
 interface ActionTypes {
@@ -22,7 +22,7 @@ export type Action = {
   };
 }
 
-const initialState: State = {
+export const initialState: State = {
   stations: [
     {name: 'Putin FM', id: '66,6', isOpen: false},
     {name: 'Dribbble FM', id: '101,2', isOpen: false},
