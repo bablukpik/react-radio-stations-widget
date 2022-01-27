@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render 1`] = `
+<DocumentFragment>
+  <header
+    class="widgetHeader"
+  >
+    <nav
+      class="nav"
+    >
+      <button
+        class="button"
+        type="button"
+      >
+        <img
+          alt="Back arrow icon"
+          data-testid="backArrowIcon"
+          src="back-arrow.png"
+        />
+      </button>
+      <h1
+        class="navHeading"
+        data-testid="navHeading"
+      >
+        STATIONS
+      </h1>
+      <button
+        class="button"
+        type="button"
+      >
+        <img
+          alt="Switch icon"
+          data-testid="switchIcon"
+          src="switch.png"
+        />
+      </button>
+    </nav>
+  </header>
+</DocumentFragment>
+`;
