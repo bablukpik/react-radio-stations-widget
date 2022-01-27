@@ -9,6 +9,11 @@ describe('Header', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
+  it('should render the app title', () => {
+    const { getByText } = render(<Header />);
+    expect(getByText('STATIONS')).toBeInTheDocument();
+  });
+
   it('renders back arrow icon', () => {
     const { getByTestId, getByAltText} = render(<Header />);
     expect(getByTestId('backArrowIcon')).toBeInTheDocument();

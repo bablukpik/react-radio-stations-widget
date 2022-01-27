@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main should render 1`] = `
+<DocumentFragment>
+  <div
+    class="container"
+  >
+    <header
+      class="widgetHeader"
+    >
+      <nav
+        class="nav"
+      >
+        <button
+          class="button"
+          type="button"
+        >
+          <img
+            alt="Back arrow icon"
+            data-testid="backArrowIcon"
+            src="back-arrow.png"
+          />
+        </button>
+        <h1
+          class="navHeading"
+          data-testid="navHeading"
+        >
+          STATIONS
+        </h1>
+        <button
+          class="button"
+          type="button"
+        >
+          <img
+            alt="Switch icon"
+            data-testid="switchIcon"
+            src="switch.png"
+          />
+        </button>
+      </nav>
+    </header>
+    <div
+      class="stationListWrapper"
+    >
+      <ul
+        class="stationList"
+        style="opacity: 0;"
+      >
+        <li
+          class="listItem"
+          id="66,6"
+        >
+          <span
+            class="text"
+          >
+            Putin FM
+          </span>
+          <span
+            class="text textBold"
+          >
+            66,6
+          </span>
+        </li>
+        <li
+          class="listItem"
+          id="101,2"
+        >
+          <span
+            class="text"
+          >
+            Dribbble FM
+          </span>
+          <span
+            class="text textBold"
+          >
+            101,2
+          </span>
+        </li>
+        <li
+          class="listItem"
+          id="99,4"
+        >
+          <span
+            class="text"
+          >
+            Doge FM
+          </span>
+          <span
+            class="text textBold"
+          >
+            99,4
+          </span>
+        </li>
+        <li
+          class="listItem"
+          id="87,1"
+        >
+          <span
+            class="text"
+          >
+            Ballads FM
+          </span>
+          <span
+            class="text textBold"
+          >
+            87,1
+          </span>
+        </li>
+        <li
+          class="listItem"
+          id="142,2"
+        >
+          <span
+            class="text"
+          >
+            Maximum FM
+          </span>
+          <span
+            class="text textBold"
+          >
+            142,2
+          </span>
+        </li>
+      </ul>
+    </div>
+    <footer
+      class="footer"
+    />
+  </div>
+</DocumentFragment>
+`;
