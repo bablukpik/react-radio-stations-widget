@@ -27,7 +27,7 @@ const ListItem = ({ isOpen = false, children, ...props }: Props) => {
         <Button>
           <Image
             src={MinusIcon}
-            alt="Minus Icon"
+            alt="Minus icon"
           />
         </Button>
         <div className={styles.coverImgWrapper}>
@@ -39,7 +39,7 @@ const ListItem = ({ isOpen = false, children, ...props }: Props) => {
         </div>
   
         <Button>
-          <Image src={PlusIcon} alt="Plus Icon" />
+          <Image src={PlusIcon} alt="Plus icon" />
         </Button>
       </animated.div>
       )}
