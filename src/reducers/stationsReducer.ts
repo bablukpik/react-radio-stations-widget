@@ -23,17 +23,11 @@ export type Action = {
 }
 
 export const initialState: State = {
-  stations: [
-    {name: 'Putin FM', id: '66,6', isOpen: false},
-    {name: 'Dribbble FM', id: '101,2', isOpen: false},
-    {name: 'Doge FM', id: '99,4', isOpen: false},
-    {name: 'Ballads FM', id: '87,1', isOpen: false},
-    {name: 'Maximum FM', id: '142,2', isOpen: false},
-  ],
+  stations: [],
   currentlyPlaying: null,
 }
 
-const actionTypes: ActionTypes = {
+export const actionTypes: ActionTypes = {
   setStations: 'SET_STATIONS',
   setCurrentlyPlaying: 'SET_CURRENTLY_PLAYING',
 }

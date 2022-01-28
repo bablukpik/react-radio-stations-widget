@@ -5,10 +5,15 @@ const getCurrentlyPlayingStation = (state: State) => {
   return station;
 }
 
-async function fetchStations(url: string): Promise<State> {
+async function fetchStations(url: string): Promise<State | undefined> {
+ try {
   const response = await fetch(url);
   const data = await response.json();
   return data;
+ } catch (error) {
+  console.error(error);
+ }
+ return;
 }
 
 export { getCurrentlyPlayingStation, fetchStations }
