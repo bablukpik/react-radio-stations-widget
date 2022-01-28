@@ -1,7 +1,6 @@
 import { FC } from 'react';
 import { Provider } from 'react-redux';
 import { render } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
 import store from 'src/store';
 
 import Main from './index';
