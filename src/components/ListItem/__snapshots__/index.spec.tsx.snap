@@ -4,7 +4,6 @@ exports[`ListItem should render 1`] = `
 <DocumentFragment>
   <li
     class="listItem"
-    id="0,0"
   />
 </DocumentFragment>
 `;

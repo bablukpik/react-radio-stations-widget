@@ -5,8 +5,6 @@ import ListItem from './index';
 const getProps = (newProps?: any) => ({
     isOpen: false,
     children: <></>,
-    onClick: () => {},
-    id: '0,0',
     ...newProps,
 });
 
