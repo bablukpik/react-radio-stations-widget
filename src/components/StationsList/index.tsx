@@ -1,10 +1,11 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import {useSpring, animated} from 'react-spring';
 import styles from './StationsList.module.css';
 import ListItem from '../ListItem';
 import Text from '../Text';
-import {useSpring, animated} from 'react-spring';
-import { State, StationItem } from 'src/reducers/stationsReducer';
+import { State, StationItem } from '../../reducers/stationsReducer';
+import Button from '../Button';
 
 interface Props {
   state: State;
@@ -31,13 +32,15 @@ const StationList = ({ state }: Props) => {
           return (
             <React.Fragment key={item.id}>
               <ListItem
-                onClick={() => handleClick(item)}
                 key={item.id}
-                id={item.id}
                 isOpen={item.isOpen}
               >
-                <Text>{item.name}</Text>
-                <Text bold>{item.id}</Text>
+                <Button onClick={() => handleClick(item)}>
+                  <Text>{item.name}</Text>
+                </Button>
+                <Button onClick={() => handleClick(item)}>
+                  <Text bold>{item.id}</Text>
+                </Button>
               </ListItem>
             </React.Fragment>
           )

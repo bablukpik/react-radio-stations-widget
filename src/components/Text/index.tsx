@@ -3,8 +3,8 @@ import cn from 'classnames'
 import styles from './Text.module.css'
 
 interface Props {
-  bold?: boolean
-  className?: string
+  bold?: boolean;
+  className?: string;
 }
 
 const Text: React.FC<Props> = ({children, className, bold, ...props}) => {

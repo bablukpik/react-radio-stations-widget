@@ -10,11 +10,12 @@ import styles from './ListItem.module.css';
 interface Props {
   isOpen: boolean;
   children: React.ReactNode;
-  onClick: (e: any) => void;
-  id: string;
 }
 
-const ListItem = ({ isOpen = false, children, ...props }: Props) => {
+const ListItem = ({ 
+    isOpen = false,
+    children,
+  }: Props) => {
   const animateProps = useSpring({
     delay: 90,
     from: {opacity: 0},
@@ -23,7 +24,7 @@ const ListItem = ({ isOpen = false, children, ...props }: Props) => {
   return (
     <React.Fragment>
       {isOpen && (
-        <animated.div className={styles.cover} style={animateProps} {...props}>
+        <animated.div className={styles.cover} style={animateProps}>
         <Button>
           <Image
             src={MinusIcon}
@@ -43,7 +44,7 @@ const ListItem = ({ isOpen = false, children, ...props }: Props) => {
         </Button>
       </animated.div>
       )}
-      <li className={styles.listItem} {...props}>
+      <li className={styles.listItem}>
         {children}
       </li>
     </React.Fragment>

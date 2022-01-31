@@ -1,4 +1,4 @@
-import { State } from 'src/reducers/stationsReducer';
+import { State } from '../../reducers/stationsReducer';
 import { getCurrentlyPlayingStation } from '../../utils/helperFunctions';
 import Text from '../Text';
 import styles from './Footer.module.css';

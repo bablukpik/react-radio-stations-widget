@@ -5,7 +5,7 @@ import StationsList from '../StationsList';
 import Footer from '../Footer';
 import styles from './Main.module.css';
 import { fetchStations } from '../../utils/helperFunctions';
-import { actionTypes } from 'src/reducers/stationsReducer';
+import { actionTypes } from '../../reducers/stationsReducer';
 
 const Main = () => {
   const dispatch = useDispatch();

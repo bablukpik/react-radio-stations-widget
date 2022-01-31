@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { initialState, State } from 'src/reducers/stationsReducer';
+import { initialState, State } from '../../reducers/stationsReducer';
 
 import Footer from './index';
 
